@@ -20,7 +20,7 @@ app.use(cors({
 
 // Routes
 app.get('/',(req,res)=>{
-  res.json("This is server")
+  res.json("This is serverpage")
   )
 app.use('/api/auth', authRoutes);
 app.use('/api/groups', groupRoutes);
