@@ -19,6 +19,9 @@ app.use(cors({
 }));
 
 // Routes
+app.use('/',()=>{
+  console.log("This is error")
+  )
 app.use('/api/auth', authRoutes);
 app.use('/api/groups', groupRoutes);
 app.use('/api/message',messageRoutes)
