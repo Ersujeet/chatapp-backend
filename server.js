@@ -27,9 +27,9 @@ app.use('/api/groups', groupRoutes);
 app.use('/api/message',messageRoutes)
 
 // Connect to MongoDB
-const MONGO_URI = 'mongodb+srv://manofiron786:6xnZBxhdrxtOLjBe@chat.w72bq.mongodb.net/'
+
 mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
